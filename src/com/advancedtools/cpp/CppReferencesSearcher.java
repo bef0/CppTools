@@ -84,7 +84,8 @@ public class CppReferencesSearcher implements QueryExecutor<PsiReference, Refere
     });
   }
 
-  public boolean execute(final ReferencesSearch.SearchParameters params, final Processor<PsiReference> processor) {
+  @Override
+  public boolean execute(final ReferencesSearch.SearchParameters params, final Processor<? super PsiReference> processor) {
     final PsiElement target = params.getElementToSearch();
 
     if (target instanceof CppElement || target instanceof CppKeyword /*operator*/) {
@@ -148,7 +149,7 @@ public class CppReferencesSearcher implements QueryExecutor<PsiReference, Refere
   }
 
   private boolean doFindRefsInCppCode(final PsiFile psiFile, PsiElement target, ReferencesSearch.SearchParameters params,
-                                      GlobalSearchScope globalScope, final Processor<PsiReference> processor) {
+                                      GlobalSearchScope globalScope, final Processor<? super PsiReference> processor) {
     final Project project = psiFile.getProject();
     final String commandName = project.getUserData(ourKey);
     final int offset;

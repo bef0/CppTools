@@ -207,7 +207,7 @@ class ServerExecutableState {
       String s = PathManager.getPluginsPath() + File.separatorChar + CPP_TOOLS;
 
       if (!new File(s).exists()) {
-        s = PathManager.getPreinstalledPluginsPath() + File.separatorChar + CPP_TOOLS;
+        s = PathManager.getPreInstalledPluginsPath() + File.separatorChar + CPP_TOOLS;
 
         if (!new File(s).exists()) {
           throw new RuntimeException("Plugin home is not found");

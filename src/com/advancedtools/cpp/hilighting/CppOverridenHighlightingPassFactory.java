@@ -22,8 +22,10 @@ public class CppOverridenHighlightingPassFactory extends CppHighlightingPassFact
   protected void register(TextEditorHighlightingPassRegistrar instance) {
     instance.registerTextEditorHighlightingPass(
       this,
-      TextEditorHighlightingPassRegistrar.BEFORE,
-      Pass.LOCAL_INSPECTIONS
+      TextEditorHighlightingPassRegistrar.Anchor.BEFORE,
+      Pass.LOCAL_INSPECTIONS,
+      false,
+      false
     );
   }
 

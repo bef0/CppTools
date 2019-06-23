@@ -48,7 +48,7 @@ public class EnvironmentFacade {
   public Object createLookupElement(String s) {
     final MyLookupItem item = new MyLookupItem(s);
     LookupItem<MyLookupItem> lookupItem = new LookupItem<MyLookupItem>(item, item.getPresentation());
-    lookupItem.setTypeText(item.getTypeHint()).setInsertHandler(new BasicInsertHandler<LookupElement>() {
+    lookupItem/*.setTypeText(item.getTypeHint())*/.setInsertHandler(new BasicInsertHandler<LookupElement>() {
       @Override
       public void handleInsert(InsertionContext insertionContext, LookupElement lookupElement) {
         super.handleInsert(insertionContext, lookupElement);

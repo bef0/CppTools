@@ -89,15 +89,14 @@ public class CppStackFrame extends XStackFrame {
   @Override
   public XDebuggerEvaluator getEvaluator() {
     return new XDebuggerEvaluator() {
-      @Override
+      /*@Override
       public boolean evaluateCondition(@NotNull String s) {
         return false;
       }
 
-      @Override
-      public String evaluateMessage(@NotNull String s) {
+      @Override public String evaluateMessage(@NotNull String s) {
         return null;
-      }
+      }*/
 
       @Override
       public void evaluate(@NotNull final String evaluated, final @NotNull XEvaluationCallback xEvaluationCallback, @Nullable XSourcePosition xSourcePosition) {

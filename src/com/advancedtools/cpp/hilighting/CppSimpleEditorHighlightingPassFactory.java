@@ -22,8 +22,10 @@ public class CppSimpleEditorHighlightingPassFactory extends CppHighlightingPassF
   protected void register(TextEditorHighlightingPassRegistrar instance) {
     instance.registerTextEditorHighlightingPass(
       this,
-      TextEditorHighlightingPassRegistrar.FIRST,
-      0xff
+      TextEditorHighlightingPassRegistrar.Anchor.FIRST,
+      0xff,
+      false,
+      false
     );
   }
 

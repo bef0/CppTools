@@ -55,7 +55,7 @@ public abstract class BaseEditorAction extends AnAction {
   }
 
   static PsiFile findFileFromDataContext(DataContext context) {
-    PsiFile file = (PsiFile)context.getData(DataConstants.PSI_FILE);
+    PsiFile file = (PsiFile)context.getData(DataConstants.FILE_EDITOR);
     final Project project = (Project) context.getData(DataConstants.PROJECT);
     final Editor editor = findEditorFromDataContext(context);
 
